@@ -22,5 +22,6 @@ Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Na
 
 ### Wymagania niefunkcjonalne:
 - System powinien być w stanie obsłużyć do ok. 100 użytkowników jednocześnie.
+- Aplikacja będzie w przyjemnej dla oka, stonowanej kolorystyce (odcienie zieleni). 
 
 
