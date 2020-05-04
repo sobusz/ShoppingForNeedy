@@ -16,7 +16,10 @@ Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Na
 
 ## Specyfikacja wymagań
 ### Wymagania funkcjonalne:
-Możliwość złożenia zamówienia w formie tekstowej na koncie klienta oraz odebrania/wyświetlenia go przez wolontariusza. Po zaakceptowaniu zamówienia użytkownik zostanie o tym powiadomiony.
+- System powinien umożliwić stworzenie zamówienia składającego się z tekstowej listy zakupów oraz opcjonalnych uwag, oraz adresu osoby zamawiającej. 
+- System powinien umożliwić wolontariuszowi w okolicy przeglądanie list zakupowych i podjęcie ich.
+- System powinien umożliwić osobie zamawiającej usunięcie zamówienia po odebraniu go od wolontariusza.
+
 ### Wymagania niefunkcjonalne:
 System będzie w stanie obsłużyć do ok. 100 użytkowników jednocześnie.
 
