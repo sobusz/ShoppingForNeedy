@@ -7,9 +7,9 @@ którzy dostarczą je bezpośrednio do domu. Naszym celem jest pomoc osobom, kt�
 
 
 ## Autorzy projektu: 
-•	**Miłosz Sobiecki**
-•	**Stanisław Gardziewicz**
-•	**Szymon Zabrocki**
+-	**Miłosz Sobiecki**
+-	**Stanisław Gardziewicz**
+-	**Szymon Zabrocki**
 
 ## Prawa autorskie
 Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Nasz projekt jest w pełni prospołeczny i chcielibyśmy aby mógł rozwijać się dalej.
