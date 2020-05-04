@@ -3,22 +3,22 @@ University project for software engineering classes to make shopping easier for 
 
 #needy.
 
-#Krótki opis:
+# Krótki opis:
 Aplikacja umożliwiająca osobom starszym lub pozbawionych możliwości samodzielnych zakupów zlecenia ich wolontariuszom, 
 którzy dostarczą je bezpośrednio do domu.
 
-#Autorzy projektu: 
+# Autorzy projektu: 
 •	Miłosz Sobiecki 
 •	Stanisław Gardziewicz
 •	Szymon Zabrocki
 
-#Prawa autorskie
+# Prawa autorskie
 Aplikacja powstanie na licencji MIT z wykorzystaniem frameworka Ionic oraz bazy danych SQL na platformie Azure.
 
-#Specyfikacja wymagań
-##Wymagania funkcjonalne:
+# Specyfikacja wymagań
+## Wymagania funkcjonalne:
 Możliwość złożenia zamówienia w formie tekstowej na koncie klienta oraz odebrania/wyświetlenia go przez wolontariusza.
-##Wymagania niefunkcjonalne:
+## Wymagania niefunkcjonalne:
 System będzie w stanie obsłużyć do ok. 100 użytkowników jednocześnie.
 
 
