@@ -1,7 +1,7 @@
 // dashboard.page.ts
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { AuthenticateService } from '../services/authentication.service';
+import { AuthenticateService } from '../services/authenticate.service';
 
 @Component({
   selector: 'app-dashboard',

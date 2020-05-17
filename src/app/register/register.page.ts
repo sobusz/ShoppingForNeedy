@@ -1,7 +1,7 @@
 // register.page.ts
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { AuthenticateService } from '../services/authentication.service';
+import { AuthenticateService } from '../services/authenticate.service';
 import { NavController } from '@ionic/angular';
 
 @Component({
