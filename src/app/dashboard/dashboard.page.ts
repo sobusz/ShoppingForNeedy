@@ -31,16 +31,16 @@ export class DashboardPage implements OnInit {
       console.log('err', err);
     })
 
+  // -- get user uid and email form firebase auth --
     var user = firebase.auth().currentUser;
-    var name, email, photoUrl, uid, emailVerified;
+    var email, uid;
 
     if (user != null) {
     email = user.email;
-    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                   // this value to authenticate with your backend server, if
-                   // you have one. Use User.getToken() instead.
-                   console.log("  uid: " + user.uid);
-                   console.log("  email: " + user.email);
+    uid = user.uid; 
+    console.log("  uid: " + user.uid);
+    console.log("  email: " + user.email);
+  // -- -- 
 }
 
   }
