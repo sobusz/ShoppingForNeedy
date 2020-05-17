@@ -31,17 +31,17 @@ export class DashboardPage implements OnInit {
       console.log('err', err);
     })
 
-  // -- get user uid and email form firebase auth --
-    var user = firebase.auth().currentUser;
-    var email, uid;
+//   // -- get user uid and email form firebase auth --
+//     var user = firebase.auth().currentUser;
+//     var email, uid;
 
-    if (user != null) {
-    email = user.email;
-    uid = user.uid; 
-    console.log("  uid: " + user.uid);
-    console.log("  email: " + user.email);
-  // -- -- 
-}
+//     if (user != null) {
+//     email = user.email;
+//     uid = user.uid; 
+//     console.log("  uid: " + user.uid);
+//     console.log("  email: " + user.email);
+// }
+//  // -- -- 
 
   }
 
