@@ -31,15 +31,15 @@ export class DashboardPage implements OnInit {
       console.log('err', err);
     })
 
-    // -- get data from database -- 
-    var userId = firebase.auth().currentUser.uid;
-    return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-    var imie_nazwisko = (snapshot.val() && snapshot.val().imie_nazwisko) || 'Anonymous';
-    var nr_telefonu = (snapshot.val() && snapshot.val().nr_telefonu) || 'Anonymous';
-    console.log("test",imie_nazwisko);
-    console.log("test",nr_telefonu);
-    // -- get data from database --
-});
+//     // -- get data from database -- 
+//     var userId = firebase.auth().currentUser.uid;
+//     return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//     var imie_nazwisko = (snapshot.val() && snapshot.val().imie_nazwisko) || 'Anonymous';
+//     var nr_telefonu = (snapshot.val() && snapshot.val().nr_telefonu) || 'Anonymous';
+//     console.log("test",imie_nazwisko);
+//     console.log("test",nr_telefonu);
+//     // -- get data from database --
+// });
 
   }
 
