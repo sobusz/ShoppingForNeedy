@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-dashboard',
@@ -29,6 +30,18 @@ export class DashboardPage implements OnInit {
     }, err => {
       console.log('err', err);
     })
+
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+
+    if (user != null) {
+    email = user.email;
+    uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                   // this value to authenticate with your backend server, if
+                   // you have one. Use User.getToken() instead.
+                   console.log("  uid: " + user.uid);
+                   console.log("  email: " + user.email);
+}
 
   }
 
