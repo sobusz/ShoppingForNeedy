@@ -23,6 +23,10 @@
 
     <ion-list>
       <ion-item>
+        <ion-label>Imię: </ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
         <ion-label>Numer telefonu: </ion-label>
         <ion-input type="number"></ion-input>
       </ion-item>
@@ -36,15 +40,16 @@
       </ion-item>
       <ion-item>
         <ion-toggle slot="start"></ion-toggle>
-        <ion-label>Innetest</ion-label>
+        <ion-label>Wyprowadzę zwierzę na spacer</ion-label>
       </ion-item>
     </ion-list>
+    <ion-button type="submit">Zapisz</ion-button>
   </ion-grid>
 
 
 </ion-content>
-<ion-footer (click)="logout()">
+<!-- <ion-footer (click)="logout()">
   <ion-toolbar color="secondary">
     <ion-title>Wyloguj się</ion-title>
   </ion-toolbar>
-</ion-footer>
+</ion-footer> -->
