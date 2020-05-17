@@ -1,51 +1,18 @@
-<!-- home.page.html -->
-<ion-header [translucent]="true">
+<ion-header>
+  <ion-toolbar>
 
-  <ion-toolbar color="warning">
-    <ion-button (click)="loadMap()" shape="round" color="dark">
-      <ion-icon slot="start" name="locate"></ion-icon>
-      Where I Am
-    </ion-button>
-    <ion-title slot="end">Google Map</ion-title>
   </ion-toolbar>
-
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <div class="map-wrapper">
-    <div id="map_center">
-      <img src="assets/icon/location-marker.png" />
-    </div>
-    <div #map id="map"></div>
-  </div>
-
+<ion-content class="auth-form">
   <ion-grid>
     <ion-row>
-      <ion-col size="3">
-        <b>Lattitude</b>
-      </ion-col>
-      <ion-col>
-        {{latitude}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="3">
-        <b>Longitude</b>
-      </ion-col>
-      <ion-col>
-        {{longitude}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col size="3">
-        <b>Address</b>
-      </ion-col>
-      <ion-col>
-        {{address}}
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/register']" expand="block" color="primary">Register</ion-button>
+        <span class="divider line one-line">or</span>
+        <span class="already">Already a user?</span>
+        <ion-button [routerLink]="['/login']" expand="block" color="danger" posi>Sign In</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
 </ion-content>

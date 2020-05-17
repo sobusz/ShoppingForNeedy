@@ -14,10 +14,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
-
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,13 +23,10 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase)
-    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Geolocation,
-    NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
