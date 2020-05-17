@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
-import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-dashboard',
@@ -30,18 +29,6 @@ export class DashboardPage implements OnInit {
     }, err => {
       console.log('err', err);
     })
-
-//   // -- get user uid and email form firebase auth --
-//     var user = firebase.auth().currentUser;
-//     var email, uid;
-
-//     if (user != null) {
-//     email = user.email;
-//     uid = user.uid; 
-//     console.log("  uid: " + user.uid);
-//     console.log("  email: " + user.email);
-// }
-//  // -- -- 
 
   }
 

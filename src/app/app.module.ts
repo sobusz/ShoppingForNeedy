@@ -17,8 +17,6 @@ import { environment } from '../environments/environment';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
-import { Firebase } from '@ionic-native/firebase/ngx';
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
