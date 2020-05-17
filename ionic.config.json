@@ -1,5 +1,7 @@
 {
   "name": "needy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

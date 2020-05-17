@@ -1,41 +1,32 @@
-
-.divider {
-    display: flex;
-    
-    &:before,
-    &:after {
-      content: "";
-      flex: 1;
-    }
-}
+#map_canvas {
+    width: 90%;
+    height: 80%;
+    border: 1px solid red;
+  }
   
-.line {
-    align-items: center;
-    margin: 1em -1em;
-    color: #cccccc;
-    
-    &:before,
-    &:after {
-      height: 1px;
-      margin: 0 1em;
+  
+  #address {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  #map {
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .map-wrapper {
+    position: relative;
+  
+    #map_center {
+      position: absolute;
+      z-index: 99;
+      height: 40px;
+      width: 40px;
+      top: 50%;
+      left: 50%;
+      margin-left: -21px;
+      margin-top: -41px;
     }
-} 
-
-.one-line {
-    &:before,
-    &:after {
-       background: #cccccc;
-    }
-}
-
-.auth-form ion-grid,
-.auth-form ion-row {
-    height: 100%;
-    justify-content: center;
-}
-
-.already {
-    display: block;
-    text-align: center;
-    padding-bottom: 10px;
-}
+  }
