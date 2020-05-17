@@ -1,24 +1,26 @@
-<!-- <ion-app>
-  <ion-menu content-id="menu">
+<ion-app>
+  <ion-split-pane contentId="main">
+  <ion-menu content-id="main">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Start Menu</ion-title>
+          <ion-back-button></ion-back-button>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-item href="/register">Dołącz jako wolontariusz</ion-item>
+        <ion-item href="/register">Jak to działa?</ion-item>
+        <ion-item href="/login">Logowanie</ion-item>
+        <ion-item href="/dashboard">Panel użytkownika</ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet id="menu"></ion-router-outlet>
-</ion-app> -->
-
+  <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+<!-- 
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
-</ion-app>
+</ion-app> -->
 
