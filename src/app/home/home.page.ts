@@ -55,6 +55,14 @@ export class HomePage {
         this.getAddressFromCoords(this.map.center.lat(), this.map.center.lng())
       });
 
+      var marker = new google.maps.Marker({
+        position: latLng,
+        title: "test"
+      });
+
+      marker.setMap(this.map);
+  
+
     }).catch((error) => {
       console.log('Error getting location', error);
     });
