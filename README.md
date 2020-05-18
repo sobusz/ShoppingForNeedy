@@ -1,9 +1,9 @@
 # needy.
 
 ## Opis projektu:
-  ***needy.*** to aplikacja umożliwiająca osobom starszym lub pozbawionych możliwości samodzielnych zakupów zlecenia ich wolontariuszom, 
-którzy dostarczą je bezpośrednio do domu. Naszym celem jest pomoc osobom, które nie są w stanie samodzielnie poradzić sobie z tak podstawową czynnością jak zrobienie zakupów, szczególnie w dobie pandemii. 
-  Po drugiej stronie aplikacji będzie mógł znaleźć się każdy, kto tylko zechce pomóc. Aby nasz projekt działał sprawnie potrzebujemy wolontariuszy, którzy choćby przy okazji zrobienia zakupów dla siebie będą chętni pomóc i dostarczyć niezbędne produkty osobom korzystającym z ***needy.*** 
+  ***needy.*** to aplikacja skierowana głównie do osób starszych lub takich, które nie chcą ryzykować wyjścia z domu. 
+  Po drugiej stronie aplikacji będzie mógł znaleźć się każdy, kto tylko zechce pomóc. Aby nasz projekt działał sprawnie potrzebujemy wolontariuszy, którzy byliby w stanie zrobić zakupy, wyjść z psem na spacer lub po prostu porozmawiać. 
+  Projekt opiera się o system pinów na mapie reprezentujących wolontariuszy gotowych nieść pomoc w danej okolicy. 
 
 
 ## Autorzy projektu: 
@@ -16,12 +16,10 @@ Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Na
 
 ## Specyfikacja wymagań:
 ### Wymagania funkcjonalne:
-- System powinien umożliwić stworzenie zamówienia składającego się z tekstowej listy zakupów oraz opcjonalnych uwag, oraz adresu osoby zamawiającej. 
-- System powinien umożliwić wolontariuszowi w okolicy przeglądanie list zakupowych i podjęcie ich.
-- System powinien umożliwić osobie zamawiającej usunięcie zamówienia po odebraniu go od wolontariusza.
+- System powinien wyświetlić mapę regionu wraz z orientacyjną lokalizacją wolonariuszy w postaci pinezek na mapie.
+- System powinien umożliwić wolontariuszowi założenie konta oraz ustawienie w swoim profilu gotowości do pełnienia konkretnych funkcji oraz zapisać je w bazie danych w celu dalszego wyświetlenia ich w postaci pinów na mapie.
+- Po kliknięciu na pinezkę system powinien wyświetlić podstawowe informacje o wolontariuszu: imię, numer telefonu oraz zakres czynności, które ten jest gotowy wykonać. 
 
 ### Wymagania niefunkcjonalne:
 - System powinien być w stanie obsłużyć do ok. 100 użytkowników jednocześnie.
-- Aplikacja będzie w przyjemnej dla oka, stonowanej kolorystyce (odcienie zieleni). 
-
-
+- Aplikacja będzie w przyjemnej dla oka, stonowanej kolorystyce.
