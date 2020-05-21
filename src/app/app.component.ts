@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthenticateService } from './services/authenticate.service';
+import { ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private authService: AuthenticateService
+    private authService: AuthenticateService,
+    private toastCtrl : ToastController
 
   ) {
     this.initializeApp();
@@ -26,7 +29,8 @@ export class AppComponent {
     this.authService.logoutUser()
       .then(res => {
         console.log(res);
-        this.navCtrl.navigateBack('');
+        //this.navCtrl.navigateBack('');
+
       })
       .catch(error => {
         console.log(error);
@@ -39,17 +43,26 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 
-  openEnd() {
-    this.menu.open('end');
-  }
+  // openEnd() {
+  //   this.menu.open('end');
+  // }
 
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
+  // openCustom() {
+  //   this.menu.enable(true, 'custom');
+  //   this.menu.open('custom');
+  // }
+
+   async presentToast() {
+    const toast =  (await this.toastCtrl.create({
+      message: 'Zostałeś wylogowany.',
+      position: 'bottom',
+      cssClass: 'customToastClass',
+      duration: 3000
+    })).present();
   }
 }
