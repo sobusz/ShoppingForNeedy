@@ -79,7 +79,7 @@ Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Na
 **Sposób dostępu:** Widok główny aplikacji.  
 **Scenariusz (kroki testowe):**   
 #### Akcje użytkownika:  
-1. Wybranie przycisku 'Znajdź mnie' będac zalogowanym.
+1. Włączenie aplikacji.
 
 #### Odpowiedź systemu:  
 1. Aplikacja odświeży mapę, wycentrowując się w miejscu lokacji danego użytkownika.
