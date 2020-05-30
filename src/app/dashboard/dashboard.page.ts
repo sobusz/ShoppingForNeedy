@@ -5,6 +5,8 @@ import { AuthenticateService } from '../services/authenticate.service';
 import * as firebase from 'firebase';
 import {ElementRef, ViewChild} from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { ToastController } from '@ionic/angular';
+import { PRIMARY_OUTLET } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,7 +27,8 @@ export class DashboardPage implements OnInit {
   constructor(
     private navCtrl: NavController,
     private authService: AuthenticateService,
-    private geolocation: Geolocation
+    private geolocation: Geolocation,
+    public toastController: ToastController
   ) { }
 
   ngOnInit() {
@@ -47,6 +50,15 @@ export class DashboardPage implements OnInit {
       this.longitude = resp.coords.longitude;
     }) 
 
+  }
+
+  public async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Twoje ustawienia zostały zapisane.',
+      color: "primary",
+      duration: 2500
+    });
+    toast.present();
   }
 // -- write to databse -- 
   test() {
