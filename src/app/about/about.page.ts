@@ -37,7 +37,7 @@ import { Component, OnInit } from '@angular/core';
 
         <p>Niezależnie od tego którą stroną jesteś, zostaniesz poproszony/a o udostępnienie danych geolokalizacyjnych, prosimy o akceptację.</p>
         <br>
-        <p>Jeżeli jesteś w stanie pomóc innym, masz chwilę czasu to zarejestruj się i prosto pomagaj innym. Dziękujemy <3</p>
+        <p>Dzięki temu możesz wyszukiwać Wolontariuszy w pobliżu. Jeżeli jesteś Wolontariuszem, to pomoże to określić Twój region.</p>
         <br>
         <br>
       </div>
