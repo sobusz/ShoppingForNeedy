@@ -31,26 +31,26 @@
       </ion-item>
       <ion-item>
         <ion-label>Numer telefonu: </ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input  id="telefon" type="number"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle (ionChange)="changeZakupy()" slot="start"></ion-toggle>
         <ion-label>Zrobię zakupy</ion-label>
       </ion-item>
       <ion-item>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle (ionChange)="changeSamochod()" slot="start"></ion-toggle>
         <ion-label>Mam samochód</ion-label>
       </ion-item>
       <ion-item>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle (ionChange)="changePies()" slot="start"></ion-toggle>
         <ion-label>Wyprowadzę zwierzę na spacer</ion-label>
       </ion-item>
       <ion-item>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle (ionChange)="changeApteka()" slot="start"></ion-toggle>
         <ion-label>Pojadę do apteki</ion-label>
       </ion-item>
       <ion-item>
-        <ion-toggle slot="start"></ion-toggle>
+        <ion-toggle (ionChange)="changeRozmowa()" slot="start"></ion-toggle>
         <ion-label>Chętnie porozmawiam :)</ion-label>
       </ion-item>
     </ion-list>
