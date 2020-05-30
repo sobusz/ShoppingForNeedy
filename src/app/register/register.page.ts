@@ -18,12 +18,12 @@ export class RegisterPage implements OnInit {
 
   validation_messages = {
     'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Enter a valid email.' }
+      { type: 'required', message: 'Email jest wymagany.' },
+      { type: 'pattern', message: 'Podaj prawidłowy email' }
     ],
     'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password must be at least 6 characters long.' }
+      { type: 'required', message: 'Hasło jest wymagange.' },
+      { type: 'minlength', message: 'Hasło musi mieć minimum 6 znaków.' }
     ]
   };
 
@@ -51,7 +51,7 @@ export class RegisterPage implements OnInit {
       .then(res => {
         console.log(res);
         this.errorMessage = "";
-        this.successMessage = "Your account has been created. Please log in.";
+        this.successMessage = "Twoje konto zostało utoworzone. Zaloguj się.";
       }, err => {
         console.log(err);
         this.errorMessage = err.message;
@@ -60,7 +60,7 @@ export class RegisterPage implements OnInit {
   }
 
   goLoginPage() {
-    this.navCtrl.navigateBack('');
+    this.navCtrl.navigateForward('/login');
   }
 
 
