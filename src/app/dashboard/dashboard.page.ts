@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
 import * as firebase from 'firebase';
+import {ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,7 @@ import * as firebase from 'firebase';
 export class DashboardPage implements OnInit {
 
   userEmail: string;
-
+  
   constructor(
     private navCtrl: NavController,
     private authService: AuthenticateService
@@ -38,19 +39,28 @@ export class DashboardPage implements OnInit {
       if (user) {
         var userId = firebase.auth().currentUser.uid;
 
-        let input = (document.getElementById('testXD') as HTMLInputElement).value;
-        writeUserData(userId, input)
+        let imieInput = (document.getElementById('testXD') as HTMLInputElement).value;
+        let telefonInput = (document.getElementById('telefon') as HTMLInputElement).value; 
+
+        writeUserData(userId, imieInput, telefonInput)
       } else {
         // No user is signed in.
       }
     });
 
-    function writeUserData(userId, name) {
-      firebase.database().ref('/users/' + userId).set({
-        username: name,
+    function writeUserData(userId, name, number) {
+      firebase.database().ref('/users/' + userId).update({
+        imie: name,
+        mam_samochod: true,
+        moge_porozmawiac: true,
+        nr_telefonu: number,
+        pojade_do_apteki: true,
+        wyprowadze_psa: true,
+        zrobie_zakupy: true,
       });
     }
   }
+  
 // --end: write to databse -- 
 
   logout() {
