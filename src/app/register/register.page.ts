@@ -51,7 +51,7 @@ export class RegisterPage implements OnInit {
       .then(res => {
         console.log(res);
         this.errorMessage = "";
-        this.successMessage = "Twoje konto zostało utoworzone. Zaloguj się.";
+        this.successMessage = "Twoje konto zostało utworzone. Zaloguj się.";
       }, err => {
         console.log(err);
         this.errorMessage = err.message;
