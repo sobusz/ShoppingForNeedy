@@ -40,13 +40,18 @@ export class DashboardPage implements OnInit {
         var userId = firebase.auth().currentUser.uid;
 
         let imieInput = (document.getElementById('testXD') as HTMLInputElement).value;
-        let telefonInput = (document.getElementById('telefon') as HTMLInputElement).value; 
+        let telefonInput = (document.getElementById('telefon') as HTMLInputElement).value;
+
+        // tu powinno być zczytywanie wartości toggla z html'a 
 
         writeUserData(userId, imieInput, telefonInput)
       } else {
         // No user is signed in.
       }
     });
+
+
+        // do writeUserData trzeba przekazać dane które zczytamy z toggla (zmienić z true/false na zmienną z test())
 
     function writeUserData(userId, name, number) {
       firebase.database().ref('/users/' + userId).update({
