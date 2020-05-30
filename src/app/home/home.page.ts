@@ -91,8 +91,16 @@ export class HomePage {
         // To add the marker to the map, call setMap();
         marker.setMap(map);
 
+        var infowindow = new google.maps.InfoWindow({
+          content: child.val().imie + child.val().nr_telefonu
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
         });
       });
+      
 
       // -- end --
 
