@@ -91,8 +91,40 @@ export class HomePage {
         // To add the marker to the map, call setMap();
         marker.setMap(map);
 
+        var samochod = child.val().mam_samochod;
+        var pies = child.val().wyprowadze_psa;
+        var rozmowa = child.val().moge_porozmawiac;
+        var zakupy = child.val().zrobie_zakupy;
+  
+        if(samochod){samochod = 'Mam samochód'}
+        else{samochod = 'Nie mam samochodu'}
+
+        if(pies){pies = 'Mogę wyprowadzić zwierzę na spacer'}
+        else{pies = ''}
+
+        if(rozmowa){rozmowa = 'Chętnie porozmawiam'}
+        else{rozmowa = ''}
+
+        if(zakupy){zakupy = 'Mogę zrobić zakupy'}
+        else{zakupy = ''}
+
+
+
+        const contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h1 id="firstHeading" class="firstHeading">' + child.val().imie + '</h1>' +
+        '<h4> Numer telefonu: ' + '<br>' + child.val().nr_telefonu + '</h4>' +
+        '<div id="bodyContent">' +
+        '<h5>' + samochod + '</h5>' +
+        '<h5>' + pies + '</h5>' +
+        '<h5>' + rozmowa + '</h5>' +
+        '<h5>' + zakupy + '</h5>'        
+        '</div>';
+
+
         var infowindow = new google.maps.InfoWindow({
-          content: child.val().imie + child.val().nr_telefonu
+          content: contentString
         });
 
         marker.addListener('click', function() {
