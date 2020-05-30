@@ -140,6 +140,8 @@ export class HomePage {
       console.log('Error getting location', error);
     });
   }
+  
+
 
   // getAddressFromCoords(lattitude, longitude) {
   //   // console.log("getAddressFromCoords " + lattitude + " " + longitude);
