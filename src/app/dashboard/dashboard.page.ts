@@ -65,14 +65,10 @@ export class DashboardPage implements OnInit {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         var userId = firebase.auth().currentUser.uid;
-        let imieInput = (document.getElementById('testXD') as HTMLInputElement).value;
+        let imieInput = (document.getElementById('inputImie') as HTMLInputElement).value;
         let telefonInput = (document.getElementById('telefon') as HTMLInputElement).value; 
-        //var dd = this.zakupy;
-        //this.zakupy
 
         writeUserData(userId, imieInput, telefonInput)
-      } else {
-        // No user is signed in.
       }
     });
 
