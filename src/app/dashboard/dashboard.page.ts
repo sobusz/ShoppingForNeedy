@@ -4,6 +4,7 @@ import { NavController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authenticate.service';
 import * as firebase from 'firebase';
 import {ElementRef, ViewChild} from '@angular/core';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,11 +19,13 @@ export class DashboardPage implements OnInit {
   pies:boolean = false;
   apteka:boolean = false;
   rozmowa:boolean = false;
-
+  latitude: number;
+  longitude: number;
   
   constructor(
     private navCtrl: NavController,
-    private authService: AuthenticateService
+    private authService: AuthenticateService,
+    private geolocation: Geolocation
   ) { }
 
   ngOnInit() {
@@ -37,6 +40,12 @@ export class DashboardPage implements OnInit {
     }, err => {
       console.log('err', err);
     })
+
+    this.geolocation.getCurrentPosition().then((resp) => {
+
+      this.latitude = resp.coords.latitude;
+      this.longitude = resp.coords.longitude;
+    }) 
 
   }
 // -- write to databse -- 
@@ -60,10 +69,14 @@ export class DashboardPage implements OnInit {
     let roz = this.rozmowa;
     let apt = this.apteka;
     let pies = this.pies;
+    let latitude = this.latitude;
+    let longitude = this.longitude;
 
     function writeUserData(userId, name, number) {
       firebase.database().ref('/users/' + userId).update({
         imie: name,
+        lat: latitude,
+        lng: longitude,
         mam_samochod: sam,
         moge_porozmawiac: roz,
         nr_telefonu: number,

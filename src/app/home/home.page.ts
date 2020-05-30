@@ -4,6 +4,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
 import * as firebase from 'firebase';
+import { FirebaseApp } from '@angular/fire';
 
 declare var google;
 
@@ -56,7 +57,7 @@ export class HomePage {
         this.getAddressFromCoords(this.map.center.lat(), this.map.center.lng())
       });
 
-      // -- get lacation from current user and create his marker --
+      // -- get location of current user and create his marker --
       firebase.initializeApp({
       apiKey: "AIzaSyCK0303BhB_05pCa0RQg2Xt_ft-8XYBXrM",
       authDomain: "needy-93473.firebaseapp.com",
@@ -64,39 +65,29 @@ export class HomePage {
       projectId: "needy-93473",
       storageBucket: "needy-93473.appspot.com",
       messagingSenderId: "882615586096",});
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          var userId = firebase.auth().currentUser.uid;
-          return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-            var lat = (snapshot.val() && snapshot.val().lat) || 'Anonymous';
-            var lng = (snapshot.val() && snapshot.val().lng) || 'Anonymous';
-            console.log("test",lat);
-            console.log("test",lng);
 
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            var myLatLng ={lat,lng};
-            var marker = new google.maps.Marker({
-              position: myLatLng,
-
-              title: 'Hello World!'
-            });
-            marker.setMap(map);
-
-
-            });
-        } else {
-          // No user is signed in.
-        }
-
+      var rootRef = firebase.database().ref();
+      var urlRef = rootRef.child("users");
+      urlRef.once("value", function(snapshot) {
+        snapshot.forEach(function(child) {
+          console.log(child.val().imie);
+          console.log(child.val().nr_telefonu);
+          console.log(child.val().lat);
+          console.log(child.val().lng);
+          console.log(child.val().zrobie_zakupy);
+          console.log(child.val().mam_samochod);
+          console.log(child.val().wyprowadze_psa);
+          console.log(child.val().pojade_do_apteki);
+          console.log(child.val().moge_porozmawiac);
+        });
       });
-      // -- get lacation from current user and create his marker --
+
+      // -- end --
 
     }).catch((error) => {
       console.log('Error getting location', error);
     });
   }
-
-
 
   getAddressFromCoords(lattitude, longitude) {
     console.log("getAddressFromCoords " + lattitude + " " + longitude);
