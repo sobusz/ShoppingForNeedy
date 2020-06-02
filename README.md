@@ -24,6 +24,16 @@ Aplikacja powstanie na licencji MIT, całość posiadać będzie otwarty kod. Na
 - System powinien być w stanie obsłużyć do ok. 100 użytkowników jednocześnie.
 - Aplikacja będzie w przyjemnej dla oka, stonowanej kolorystyce.
 
+## Architektura
+### Architektura rozwoju
+1. Ionic  
+2. Firebase Authentication  
+3. Firebase Storage  
+4. jQuery  
+5. Cordova  
+6. Visual Studio  
+7. Angular 9  
+
 ## Scenariusze testów - testy akceptacyjne
 ### 1 - Instalacja aplikacji na urządzeniu mobilnym
 **Cel testu:** Testowanie poprawnego pobierania oraz instalowania aplikacji needy na urządzeniu mobilnym.  
