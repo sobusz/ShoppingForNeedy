@@ -3,7 +3,7 @@
 ## Opis projektu:
   ***needy.*** to aplikacja skierowana głównie do osób starszych lub takich, które nie chcą ryzykować wyjścia z domu. 
   Po drugiej stronie aplikacji będzie mógł znaleźć się każdy, kto tylko zechce pomóc. Aby nasz projekt działał sprawnie potrzebujemy wolontariuszy, którzy byliby w stanie zrobić zakupy, wyjść z psem na spacer lub po prostu porozmawiać. 
-  Projekt opiera się o system pinów na mapie reprezentujących wolontariuszy gotowych nieść pomoc w danej okolicy. 
+  Projekt opiera się o system pinów na mapie reprezentujących wolontariuszy gotowych nieść pomoc w danej okolicy. ;)
 
 
 ## Autorzy projektu: 
